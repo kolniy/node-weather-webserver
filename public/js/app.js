@@ -10,8 +10,8 @@
 
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
-cd
-    fetch(`http://localhost:3000/weather?address=${location}`).then((response) => {
+
+    fetch(`/weather?address=${location}`).then((response) => {
      response.json().then((data) => {
 
         if(data.error) { 
@@ -19,6 +19,7 @@ cd
         } else {    
         messageOne.textContent = data.location
         messageTwo.textContent = data.forecast
+     
         }
      })
  })
