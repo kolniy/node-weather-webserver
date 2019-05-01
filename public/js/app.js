@@ -10,7 +10,7 @@
 
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
-
+cd
     fetch(`http://localhost:3000/weather?address=${location}`).then((response) => {
      response.json().then((data) => {
 
